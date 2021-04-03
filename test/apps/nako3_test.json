@@ -1,0 +1,26 @@
+﻿{
+  "app_name": "なでしこ３用Maplatプラグインのテスト",
+  "home_position": [140.75680304835672, 41.79692727057318],
+  "default_zoom": 17,
+  "start_from": "goryokaku",
+  "sources": [
+    {
+      "mapID": "goryokaku",
+      "label": "五稜郭三分十間図",
+      "setting_file" : "https://snowdrops89.github.io/Maplat_test/mapdata/maps/goryokaku.json",
+      "thumbnail" : "https://snowdrops89.github.io/Maplat_test/mapdata/tmbs/goryokaku_menu.jpg",
+      "url" : "https://snowdrops89.github.io/Maplat_test/mapdata/tiles/goryokaku/{z}/{x}/{y}.jpg"
+    },
+    {
+      "mapID": "goryokaku2",
+      "label": "五稜郭ノ図千分ノ一",
+      "setting_file" : "https://snowdrops89.github.io/Maplat_test/mapdata/maps/goryokaku2.json",
+      "thumbnail" : "https://snowdrops89.github.io/Maplat_test/mapdata/tmbs/goryokaku2_menu.jpg",
+      "url" : "https://snowdrops89.github.io/Maplat_test/mapdata/tiles/goryokaku2/{z}/{x}/{y}.jpg"
+    },
+    "osm",
+    "gsi",
+    "gsi_ortho"
+  ],
+  "pois": "pois/pois.json"
+}
