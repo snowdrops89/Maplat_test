@@ -13,6 +13,8 @@
 <script type="なでしこ">
 #-----------------------------------------------------------------------
 ＃----- 設定 --------------------
+座標は空配列。
+
 ＃＃--- HTML作成 -----
 DOM親要素にMaplatHTML&「<div id="ボタン"></div>」をHTML設定。
 
@@ -31,6 +33,7 @@ Maplatマーカー非表示ボタンはオン。
 ＃＃＃--- 描画 -----
 ＃●線引く（addLine）
 　Maplat線太さは3。
+
 　Maplat線種類は「実線」。Maplat線色は赤色。
 　[[140.76106042726883,41.79454925292893],[140.75260271253444,41.79478218744157]]で線引く。
 
@@ -45,6 +48,31 @@ Maplatマーカー非表示ボタンはオン。
 
 　Maplat線種類は「丸点線」。Maplat線色は緑色。Maplat線太さは5。
 　[[140.76070789349507,41.79832286988966],[140.75249239970614,41.79765274604108]]で線引く。
+
+　//ふつーにオブジェクト指定でも引けるように。（線種類、線色、線太さの設定は無効）
+　データ = {
+    "lnglats": [
+      [140.75441944900538,41.798931624673855],
+      [140.75848396243123,41.79420930528758]
+    ],
+    "stroke": {
+      "lineCap": "round",
+      "color": 黒色,
+      "width": 3
+    }
+  }
+  データで線引く。
+
+＃＃--- イベント -----
+　地図クリックした時には
+　　Maplat線種類は「実線」。Maplat線色は金色。Maplat線太さは5。
+　　座標に対象を配列追加。
+　　もし、(座標の配列要素数)＞１ならば、
+　　　座標で線引く。
+　　　座標の０を配列切り取る。
+　　ここまで。
+　ここまで。
+
 ＃＃--- Maplatここまで -----
 #-----------------------------------------------------------------------
 </script>
@@ -53,6 +81,7 @@ Maplatマーカー非表示ボタンはオン。
 <!-- なでしこを使うために必要なスクリプト -->
 <script type="text/javascript" src="https://nadesi.com/v3/cdn.php?v=3.1.24&f=release/wnako3.js&run"></script>
 <!-- なでしこでMaplatを使うために必要なプラグイン -->
-<script type="text/javascript" src="https://snowdrops89.github.io/nako3_plugin_Maplat/Plugin_Maplat.js"></script>
+<!--<script type="text/javascript" src="https://snowdrops89.github.io/nako3_plugin_Maplat/Plugin_Maplat.js"></script>-->
+<script type="text/javascript" src="Plugin_Maplat.js"></script>
 </body>
 </html>
