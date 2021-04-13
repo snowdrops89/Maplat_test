@@ -26,3 +26,10 @@ Maplat関連のテストと記事用のサンプル、それに使用する地�
 >　UI有り版で各種APIをお試し。
 >　[動作確認](https://snowdrops89.github.io/Maplat_test/test_UI/index.html)
 
+### ・test_nako3
+> **『[なでしこさんでMaplatを使いたい](https://qiita.com/snowdrops89/items/c05f89a928e48a567950)』**
+>
+> なでしこ３用プラグイン。各種APIをお試し。
+> [動作確認](https://snowdrops89.github.io/Maplat_test/test/nako3_test_2.html)
+
+
