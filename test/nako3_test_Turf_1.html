@@ -31,7 +31,8 @@ DOM親要素にMaplatHTML&「<div id="ボタン"></div>」をHTML設定。
 「面積」のボタン作成し、面積ボタンに代入。
 「中心:」のラベル作成。
 「中心点」のボタン作成し、中心点ボタンに代入。
-「重心点」のボタン作成し、重心点ボタンに代入。
+「重心(centroid)」のボタン作成し、重心点ボタンに代入。
+「重心(centerOfMass)」のボタン作成し、重心２ボタンに代入。
 「　　　」のラベル作成。
 「描画クリア」のボタン作成し、クリアボタンに代入。
 
@@ -126,6 +127,20 @@ Maplat共有ボタンはオン。
 　　観光マーカーの面塗る。
 　　Maplat線太さは10。
 　　観光マーカーの重心点に点打つ
+　ここまで。
+
+
+　重心２ボタンをクリックした時には、
+　　「史跡」のレイヤー隠す。
+　　Maplat線色は「#999900」。Maplat塗り色は「rgba(255,255,100,.3)」。Maplat線太さは2。
+　　観光マーカーの面塗る。
+　　Maplat線太さは10。
+　　『(function(lnglats){
+      var polygon = turf.helpers.polygon(lnglats);
+      var centerOfMass = turf.centerOfMass(polygon);
+      return centerOfMass.geometry.coordinates})』をcenterOfMassに代入。
+　　重心２＝centerOfMassを[[観光マーカー]]でJS関数実行。
+　　重心２に点打つ。
 　ここまで。
 
 　＃他
