@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Maplat-start_mapのテスト</title>
+    <link rel="stylesheet" href="https://unpkg.com/@maplat/ui@0.9.0/dist/assets/maplat.css">
+<!-- CSS -->
+    <style>
+      .mainview {
+        position: absolute;
+        top: 5%; bottom: 5%; left: 5%; right: 5%;
+      }
+      .button {
+        position: absolute;
+        top: 95%; bottom: 0%; left: 5%; right: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainview">
+      <div id="map_div"></div>
+    </div>
+    <div class="button">
+      <button id="kochizu">古地図座標移動</button>
+    </div>
+
+<!-- スクリプト -->
+  <script src="assets/maplat.js"></script>
+  <script>
+    var option = {
+      appid: "Maplat_test",
+      enableHideMarker: true,   //マーカー非表示
+      enableBorder: true,       //地図境界表示
+      enableShare: true,        //共有
+    }
+    Maplat.createObject(option).then(function(app) {
+      const viewpoint = {
+        x: 0,
+        y: 0
+      }
+      document.getElementById("kochizu").addEventListener("click", function(e) {
+        app.core.setViewpoint(viewpoint);
+      });
+    });
+  </script>
+  </body>
+</html>
